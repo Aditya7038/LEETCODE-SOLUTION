@@ -3,7 +3,7 @@ public:
     int trap(vector<int>& height) {
 
 
-        vector<int> v1(height.size()),v2(height.size()),v3(height.size());
+        vector<int> v1(height.size());
 
         v1[0] = -1;
 
