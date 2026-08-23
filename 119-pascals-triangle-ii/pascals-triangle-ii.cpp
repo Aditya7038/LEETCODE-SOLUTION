@@ -1,44 +1,14 @@
 class Solution {
 public:
     vector<int> getRow(int rowIndex) {
-
-
-        vector <vector<int>> v ;
+        vector<long long> v1(rowIndex+1); // used long long cant return this because return type is vector<int>
         
-        // build shape of pascal triangle and fill
+        v1[0] = 1;
 
-        for(int i = 0; i<=rowIndex ; i++){
-
-            vector <int>v1(i+1); // size
-            v.push_back(v1);
-             
-            for(int j = 0;j<=i; j++){
-
-                if(j==0 || (i == j)){
-
-                    v[i][j] = 1;
-                }
-                else{
-                    v[i][j] = v[i-1][j] + v[i-1][j-1];
-                }
-            }
-
-                if (i==rowIndex){
-                    return v[i];
-                }
-                
-            
-            
-            
-            
+        for(int i = 0; i < rowIndex; i++){
+            v1[i+1] = v1[i] * (rowIndex - i) / (i+1);   
         }
 
-        
-    
-    return {};
+        return vector<int>(v1.begin(), v1.end());  // explicitly builds vector<int> from v1's values
     }
-        
-        
-    
 };
-        
