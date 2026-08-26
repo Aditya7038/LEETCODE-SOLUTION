@@ -7,16 +7,26 @@ public:
 
         if(len1!=len2) return false;
 
-        else{
 
-            sort(s.begin(),s.end());
-            sort(t.begin(),t.end());
 
-            if (s==t) return true;
-            else{ return false;}
+        int freq[26] = {0};
 
+        for(int i = 0 ; i<len1;i++){
+
+            freq[s[i] - 'a']  ++;
+            freq[t[i] - 'a']  --;
+        } 
+
+        for(int i = 0;i<26;i++){
+
+            if(freq[i]!=0) return false;
+        }
+
+        return true;
+
+       
 
         }
         
-    }
+    
 };
