@@ -4,40 +4,37 @@ public:
 
         if(s.size()!=t.size()) return false;
 
-        vector<int> v(150,500);
-        int diff;
+        vector<int> v1(150,500);
+
+        vector<int> v2(150,1000);
+        int diff1,diff2;
 
         for(int i = 0 ; i<s.size();i++){
 
-            int idx = int (s[i]);
+            int idx1 = int (s[i]);
 
-            diff = int(s[i])- int(t[i]);
+            int idx2 = int (t[i]);
 
-            if(v[idx] == 500) v[idx] = diff ;
+            diff1 = int(s[i])- int(t[i]);
 
-            else{
+            diff2 = int(t[i])- int(s[i]);
 
-                if(v[idx]!= diff) return false;
-            }
-        }
-
-        fill(v.begin(),v.end(),500);
-
-        for(int i = 0 ; i<t.size();i++){
-
-            int idx = int (t[i]);
-
-            diff = int(t[i])- int(s[i]);
-
-            if(v[idx] == 500) v[idx] = diff ;
+            if(v1[idx1] == 500) v1[idx1] = diff1 ;
 
             else{
-
-                if(v[idx]!= diff) return false;
+                if(v1[idx1]!= diff1) return false;
             }
+
+            if(v2[idx2] == 1000) v2[idx2] = diff2 ;
+
+            else{
+                if(v2[idx2]!= diff2) return false;
+            }
+
+
         }
 
-
+        
 
 
 
