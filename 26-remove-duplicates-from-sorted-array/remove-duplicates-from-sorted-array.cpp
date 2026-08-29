@@ -6,21 +6,19 @@ public:
 
         int k = n;
 
-        int count = 0;
+        int i =0;
 
-        for(int i =1 ; i<n;i++){
+        for(int j =1 ; j<n;j++){
 
-            if(nums[i]== nums[i-1] ){
+            if(nums[j] != nums[i] ){
 
-                count++;
-                nums.erase(nums.begin() + i); 
-                n--;
-                i--;
+                i++;
+                nums[i] = nums[j];               
             }
 
         }
 
-        return k - count;
+        return i+1;
         
     }
 };
