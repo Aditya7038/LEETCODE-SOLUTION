@@ -4,8 +4,7 @@ public:
 
         int n = arr.size();
 
-        bool flag1 = false;
-        bool flag2 = false;
+        
 
 
         int i = 0;
