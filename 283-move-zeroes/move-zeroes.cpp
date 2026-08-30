@@ -13,16 +13,16 @@ public:
 
             if (nums[i] == 0){
 
-        for (int j = i+1;;){
+        for (int j = i+1;;j++){
 
-            if (j>n-1) break;
-
-            if (nums[j]==0) j++;
+            if (nums[j]==0) ;
 
             else{
                  swap(nums[i], nums[j]);
                  break;     
                  }
+
+            if (j>=n-1) break;     
 
         }
 
