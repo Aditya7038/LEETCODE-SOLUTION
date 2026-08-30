@@ -12,8 +12,6 @@ public:
         for(int i = k ; i<n; i++){
 
             if(nums[i]!=0){
-
-                
                 swap(nums[i],nums[j]);
                 j++;
             }
