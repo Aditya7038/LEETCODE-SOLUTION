@@ -13,7 +13,7 @@ public:
 
         if(n<3) return false;
 
-        for(;i<n;){
+        for(;i<n-1;){
 
             if(arr[i+1]>arr[i]) i++;
             else break;
@@ -24,7 +24,7 @@ public:
             else break;
         }
 
-        if( i ==0) return false;
+        if(i ==0) return false;
         if(j==n-1) return false;
 
         if(i==j) return true;
