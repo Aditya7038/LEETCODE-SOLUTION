@@ -2,40 +2,36 @@ class Solution {
 public:
     bool validMountainArray(vector<int>& arr) {
 
-
-        int j = arr.size()-1;
-
-        int i =0;
+        int n = arr.size();
 
         bool flag1 = false;
         bool flag2 = false;
 
-        if(arr.size()<3) return false;
 
-        for (;i<j;){
+        int i = 0;
+        int j = n-1;
+
+        if(n<3) return false;
+
+        for(;i<n;){
 
             if(arr[i+1]>arr[i]) i++;
-
-            else flag1 = true;
+            else break;
+        }
+         for(;j>0;){
 
             if(arr[j-1]>arr[j]) j--;
-
-            else flag2 = true;
-
-            if(j==arr.size()-1) return false; // increasing arr only
-
-            if(i == 0 ) return false; // decreasing arr only
-
-            if (flag1 == true && flag2 == true) break;
-
-            
-
+            else break;
         }
+
+        if( i ==0) return false;
+        if(j==n-1) return false;
 
         if(i==j) return true;
 
 
         return false;
+
 
         
     }
