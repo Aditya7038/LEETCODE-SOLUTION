@@ -14,10 +14,7 @@ public:
                 count++;
             }
 
-            if(nums[i]==0){
-
-                count = 0;
-            }
+            else  count = 0;
 
             if( count>max_count){
 
