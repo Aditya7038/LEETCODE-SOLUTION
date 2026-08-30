@@ -7,10 +7,13 @@ public:
 
         int j =0;
 
-        for(int i = 0 ; i<n; i++){
+        int k =0;
+
+        for(int i = k ; i<n; i++){
 
             if(nums[i]!=0){
 
+                i = i;
                 swap(nums[i],nums[j]);
                 j++;
             }
