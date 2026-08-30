@@ -21,8 +21,7 @@ public:
 
             else{
                  swap(nums[i], nums[j]);
-                 break;
-                 
+                 break;     
                  }
 
         }
