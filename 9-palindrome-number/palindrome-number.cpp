@@ -2,22 +2,34 @@ class Solution {
 public:
     bool isPalindrome(int x) {
 
-        string s = to_string(x);
+        if(x==0) return true;
 
-        int n = s.size();
+        if(x<0) return false;
 
-        int i = 0 ;
-        int j = n-1;
+        int n = log10(x) + 1;
 
-        for(; i<j;){
+        if(n==1) return true;
 
-            if(s[i]==s[j]) i++,j--;
+        
+        int reverse = 0 ;
+        int ld  ;
 
-            else return false;
+        for(int i = 0 ; i<n/2;i++){
+
+            ld  = x % 10;
+
+            reverse = reverse * 10 + ld;
+
+            x = x/10;
+ 
         }
 
+        if(x == reverse &&  n%2==0) return true;
 
-        return true;
+        else if( n%2 !=0 && x/10 == reverse  ) return true;
+
+        else return false;
+ 
         
     }
 };
