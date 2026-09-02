@@ -9,14 +9,21 @@ public:
 
     v[0] = 1;
     v[1] = 2;
+    int firstmax,secmax=2,thirdmax=1;
 
-    for (int i = 2 ; i< n;i++){
 
-        v[i] = v[i-1] + v[i-2];
+    for (int i = 0 ; i< n-2;i++){
 
+        firstmax = secmax + thirdmax;
+
+        thirdmax = secmax;
+
+        secmax = firstmax;
+
+    
     }
 
-    return v[n-1];
+    return firstmax;
  
         
     }
