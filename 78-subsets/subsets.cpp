@@ -1,7 +1,7 @@
 
 
 
-void helper(vector<int> &v1,vector<vector<int>> &v2,vector<int> &nums,int idx){
+void helper(vector<int> v1,vector<vector<int>> &v2,vector<int> &nums,int idx){
 
     if(nums.size()==idx){
 
@@ -9,11 +9,11 @@ void helper(vector<int> &v1,vector<vector<int>> &v2,vector<int> &nums,int idx){
         return;
     }
 
-   v1.push_back(nums[idx]);
+   
 
     helper(v1,v2,nums,idx+1);
 
-    v1.pop_back();
+    v1.push_back(nums[idx]);
 
     helper(v1,v2,nums,idx+1);
 
