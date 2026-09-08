@@ -13,7 +13,10 @@ public:
                 candidate  = nums[i];
             }
                 
-            if(candidate==nums[i]) count++;
+            if(candidate==nums[i]){ 
+                count++;
+            continue;
+            }
 
             if(candidate!=nums[i]) count--;
 
