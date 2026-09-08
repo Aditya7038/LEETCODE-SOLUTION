@@ -15,7 +15,7 @@ public:
                 
             if(candidate==nums[i]){ 
                 count++;
-            continue;
+            continue;// early exit , if this ran , nxt if will not gonna check 
             }
 
             if(candidate!=nums[i]) count--;
