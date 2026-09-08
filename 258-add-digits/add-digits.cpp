@@ -1,7 +1,20 @@
+int count_digit(int num){
+
+    int count =0;
+
+    for(int i =0 ; num!=0;i++){
+
+        num = num/10;
+        count++;
+    }
+
+    return count;
+}
+
+
 int  helper (int num,int sum){
 
-    int len = log10(num) + 1;
-    
+    int len = count_digit(num);
 
     if(len > 1){
 
@@ -27,17 +40,15 @@ class Solution {
 public:
     int addDigits(int num) {
 
-        if(num==0) return num;
+    if(num==0) return 0;
 
-    int n = log10(num) + 1;
+    int len = count_digit(num) ;
 
-    if(n==1) return num;
+    if(len==1) return num;
 
+        int y = helper(num,0);
 
-    if(n==1) return num;
-        int x = helper(num,0);
-
-        return x;
+        return y;
         
     }
 };
