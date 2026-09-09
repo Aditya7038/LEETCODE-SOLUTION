@@ -1,5 +1,5 @@
 
-void helper(int idx,vector<int>&nums,vector<vector<int>>&v2 ){
+void helper(int idx,vector<int> nums,vector<vector<int>>&v2 ){
 
     if(idx==nums.size()-1){
 
@@ -13,7 +13,7 @@ void helper(int idx,vector<int>&nums,vector<vector<int>>&v2 ){
 
         helper(idx+1,nums,v2);
 
-        swap(nums[idx], nums[i]); 
+    
     }
 
     
