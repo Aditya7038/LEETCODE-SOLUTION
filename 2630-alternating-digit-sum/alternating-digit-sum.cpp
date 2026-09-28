@@ -5,7 +5,7 @@ public:
 
         int size = log10(n) + 1;
 
-        if(size ==1) return n;
+        
 
         int sum =0;
 
