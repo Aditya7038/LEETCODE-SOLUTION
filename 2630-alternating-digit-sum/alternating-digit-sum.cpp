@@ -1,14 +1,34 @@
 class Solution {
 public:
     int alternateDigitSum(int n) {
-        int total = 0, sign = 1;
-        while (n > 0) {
-            total += sign * (n % 10);
-            sign = -sign;
-            n /= 10;
+
+
+        int size = log10(n) + 1;
+
+        if(size ==1) return n;
+
+        int sum =0;
+
+        int j = 1;
+
+        
+
+        if(size%2==0) j=-1;
+
+        for(;n!=0;){
+
+            int lastdigit = n % 10;
+
+            sum = sum + lastdigit * j;
+
+            n = n/10;
+
+            j = -j ;
+
+
         }
-        // After the loop, sign is -1 if the digit count is odd
-        // (leading digit already got +), and +1 if even (leading got -).
-        return -sign * total;
+
+        return sum;
+        
     }
 };
