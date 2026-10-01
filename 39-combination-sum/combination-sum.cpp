@@ -12,8 +12,8 @@ void helper(vector<int>& candidates,int target,int idx , vector<int>&v1,vector<v
 
         v1.push_back(candidates[i]);
 
-        helper(candidates,target - candidates[i],i ,v1,v2 );
-
+        if(target>=candidates[i])  helper(candidates,target - candidates[i],i ,v1,v2 );
+        
         v1.pop_back();
     }
 
