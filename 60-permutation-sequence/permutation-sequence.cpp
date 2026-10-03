@@ -13,7 +13,7 @@ int fact (int n){
 
 
 
-void helper(string originalstr,int n,int k,int idx,string &empty){
+void helper(string originalstr,int n,int k,string &empty){
 
     if(originalstr.size()==1) {
 
@@ -22,7 +22,7 @@ void helper(string originalstr,int n,int k,int idx,string &empty){
         return ;
     }
 
-    idx = k / fact(n-1);
+    int idx = k / fact(n-1);
 
     empty.push_back(originalstr[idx]);
 
@@ -30,7 +30,7 @@ void helper(string originalstr,int n,int k,int idx,string &empty){
 
     string right = originalstr.substr(idx+1);
 
-    helper(left+right , n-1,k%fact(n-1),idx,empty);
+    helper(left+right , n-1,k%fact(n-1),empty);
 
 
 }
@@ -48,9 +48,9 @@ public:
             originalstr+= to_string(i);
         }
         
-        int idx=0;
+        
 
-        helper(originalstr,n,k-1,idx,empty);
+        helper(originalstr,n,k-1,empty);
 
     
 
