@@ -1,5 +1,7 @@
 void helper(int idx,vector<int>&empty,int k ,vector<int> &v1,vector<vector<int>> &v2 ){
 
+    if (empty.size() + v1.size() - idx < k) return;// pruning line
+
 
     if(empty.size()==k){
 
