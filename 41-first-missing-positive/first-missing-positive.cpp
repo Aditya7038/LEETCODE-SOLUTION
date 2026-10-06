@@ -4,14 +4,6 @@ public:
 
         int n = nums.size();
 
-        if(n==1) {
-            
-           if(nums[0] == 1)return 2;
-           else return 1;
-        }
-
-
-
         int temp = n+1;
 
         for(int i = 0;i<n;i++){
