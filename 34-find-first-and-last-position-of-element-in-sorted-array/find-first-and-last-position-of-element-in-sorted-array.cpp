@@ -15,7 +15,6 @@ int startidx(vector<int>& nums, int target){
 
                 ans = low;
                 break;
-
             } 
             else{
                 ans = high;
@@ -57,8 +56,8 @@ int endidx(vector<int>& nums, int target){
 
                 ans = high;
                 break;
-
             } 
+
             else{
                 ans = low;
                 break;
@@ -70,7 +69,6 @@ int endidx(vector<int>& nums, int target){
 
         else if (nums[mid] > target) {   
 
-            ans = low;
             high = mid-1;
         }
 
