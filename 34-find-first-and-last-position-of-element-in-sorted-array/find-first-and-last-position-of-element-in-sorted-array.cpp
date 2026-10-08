@@ -9,17 +9,31 @@ int startidx(vector<int>& nums, int target){
 
         int mid = low + (high - low) / 2;
 
+         if(high -low ==1 || high-low ==0) {
+
+            if(nums[low]==target){
+
+                ans = low;
+                break;
+
+            } 
+            else{
+                ans = high;
+                break;
+            }
+
+        }
+
         if (nums[mid] >= target) {   
 
-            ans = mid;
-            high = mid - 1;
+            high = mid ;
         }
 
          else low = mid + 1;
         
     }
 
-    if( ans!=-1  && nums[ans]!=target) ans = -1;
+    if(nums[ans]!=target) ans = -1;
 
     return ans;
 
