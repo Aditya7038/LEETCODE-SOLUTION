@@ -4,8 +4,8 @@ public:
 
         int n = arr.size();
 
-        int low = 0;
-        int high = n-1;
+        int low = 1;
+        int high = n-2;
         int ans = 0;
 
 
@@ -13,13 +13,19 @@ public:
 
             int mid = low + (high - low)/2;
 
-            if(mid !=0 && arr[mid]<arr[mid-1]  ){
+            if(arr[mid]>arr[mid-1] && arr[mid]>arr[mid+1]){
+
+                ans = mid;
+                break;
+            }
+
+            if(arr[mid]<arr[mid-1]  ){
 
                 high = mid-1;
             }
 
             else {
-                ans = mid;
+             
                 low = mid + 1;
                 }
         }
