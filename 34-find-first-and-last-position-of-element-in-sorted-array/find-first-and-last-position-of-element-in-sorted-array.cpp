@@ -9,21 +9,13 @@ int startidx(vector<int>& nums, int target){
 
         int mid = low + (high - low) / 2;
 
-         if(high -low ==1 || high-low ==0) {
+        if(high == low ){
 
-            if(nums[low]==target){
-
-                ans = low;
-                break;
-            } 
-            else{
-                ans = high;
-                break;
-            }
-
+            ans = high;
+            break;
         }
 
-        if (nums[mid] >= target) {   
+        if (nums[mid] >= target) {  
 
             high = mid ;
         }
@@ -32,16 +24,17 @@ int startidx(vector<int>& nums, int target){
         
     }
 
-    if(nums[ans]!=target) ans = -1;
+    if( ans != -1 && nums[ans]!=target) ans = -1;
 
     return ans;
 
 }
 
+
+
 int endidx(vector<int>& nums, int target){
 
     int n = nums.size();
-
 
     int ans  = -1 ;
     int low = 0, high = n - 1;
@@ -50,37 +43,28 @@ int endidx(vector<int>& nums, int target){
 
         int mid = low + (high - low) / 2;
 
-        if(high -low ==1 || high-low ==0) {
+           if(high == low ){
 
-            if(nums[high]==target){
-
-                ans = high;
-                break;
-            } 
-
-            else{
-                ans = low;
-                break;
-            }
-
+            if(nums[high] == target)ans = high;
+            break;
         }
 
-        if (nums[mid] == target) low = mid;
+        if (nums[mid] <= target) {  
 
-        else if (nums[mid] > target) {   
+            ans = mid;
 
-            high = mid-1;
+            low = mid + 1 ;
         }
 
-         else low = mid + 1;
+         else high = mid - 1;
         
     }
 
-    if(nums[ans]!=target)ans = -1;
+    if( ans != -1 && nums[ans]!=target) ans = -1;
 
     return ans;
-}
 
+}
 
 
 class Solution {
@@ -90,15 +74,6 @@ public:
         int n = nums.size();
 
         if(n==0) return {-1,-1};
-
-        if(n==1) {
-
-            if(nums[0]==target)
-            return {0,0};
-        
-
-        else return {-1,-1};
-        }
 
         int a  = startidx(nums,target);
 
