@@ -13,9 +13,11 @@ public:
 
             long long mid = low + (high - low)/2 ;
 
-            if(mid*mid > x){
+            if(mid*mid==x) return mid;
 
-                high = mid-1;
+            else if(mid*mid > x){
+
+                high = mid;
             }
            
             else {
@@ -24,7 +26,7 @@ public:
 
                 ans = mid;
 
-                low = mid  + 1;
+                low = mid;
             }
             
         }
