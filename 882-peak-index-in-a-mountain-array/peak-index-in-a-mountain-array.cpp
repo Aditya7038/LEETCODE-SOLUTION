@@ -19,12 +19,12 @@ public:
                 break;
             }
 
-            if(arr[mid]<arr[mid-1]  ){
+            else if(arr[mid-1]>arr[mid]  ){
 
                 high = mid-1;
             }
 
-            else {
+            else if(arr[mid-1]<arr[mid]) {
              
                 low = mid + 1;
                 }
