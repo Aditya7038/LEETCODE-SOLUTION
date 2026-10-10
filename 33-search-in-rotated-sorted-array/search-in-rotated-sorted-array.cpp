@@ -40,8 +40,6 @@ public:
 
                     if(target <= nums[high] && target > nums[mid]){
 
-                        ans = mid;
-
                         low = mid + 1;
                     }
 
@@ -54,10 +52,10 @@ public:
 
         }
 
-        if(ans!=-1 && nums[ans]!=target) ans = -1;
+      
 
           
-        return ans;
+        return -1;
         
     }
 };
