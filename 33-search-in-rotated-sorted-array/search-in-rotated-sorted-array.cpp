@@ -7,12 +7,7 @@ public:
        
         int n = nums.size();
 
-        if(n==1 && nums[0]!=target) return -1;
-        if(n==1 && nums[0]==target) return 0;
-
-
         
-
         
         
         int low = 0;
