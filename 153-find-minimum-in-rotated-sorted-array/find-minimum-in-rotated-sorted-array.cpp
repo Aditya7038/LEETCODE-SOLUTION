@@ -22,12 +22,11 @@ public:
 
                 low = mid + 1;
 
-
             }
 
             else{
 
-                ans = min (nums[mid+1],ans);
+                ans = min (nums[mid],ans);
 
                 high = mid-1;
 
