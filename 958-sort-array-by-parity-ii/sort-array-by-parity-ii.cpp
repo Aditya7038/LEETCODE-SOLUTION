@@ -9,7 +9,9 @@ public:
         int j = 1;
 
 
-        for(;i<n && j<n ;){
+        for(; ;){
+
+            if(i>n-1 || j>n-1) break;
 
             if(nums[i]%2==0){
 
