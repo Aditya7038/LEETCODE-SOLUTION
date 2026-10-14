@@ -25,6 +25,8 @@ public:
             if(nums[i]%2!=0 && nums[j]%2==0){
 
                 swap(nums[i],nums[j]);
+                i+=2;
+                j+=2;
             }
 
 
