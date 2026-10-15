@@ -8,7 +8,7 @@ public:
 
         int high = n-1;
 
-        char ans;
+        char ans = letters[0];
 
         for(;low<=high;){
 
@@ -28,9 +28,7 @@ public:
             }
         }
 
-        if(ans > target) return ans;
-
-        else return letters[0];
+        return ans;
 
         
     }
