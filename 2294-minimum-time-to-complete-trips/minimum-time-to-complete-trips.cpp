@@ -4,18 +4,19 @@ public:
 
         int n = time.size();
 
-        int max = 0;
+        int min = time[0];
 
         for(int i = 0;i<n;i++){
 
-            if(time[i]>max){
+            if(time[i]<min){
 
-                max = time[i];
+                min = time[i];
             }
         }
 
+
         long long low = 1;
-        long long high = (long long )max * totalTrips;
+        long long high = (long long)min*totalTrips;
         long long trips = 0;
         long long ans = 0;
 
