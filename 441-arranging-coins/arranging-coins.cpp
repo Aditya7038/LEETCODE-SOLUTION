@@ -16,7 +16,7 @@ public:
 
             sum = (long long)mid*(mid+1)/2;
 
-            if(n==sum) return mid;
+            
 
             if(n<sum){
 
