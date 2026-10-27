@@ -2,23 +2,34 @@ class Solution {
 public:
     int heightChecker(vector<int>& heights) {
 
-        vector<int> freq(101, 0);
+        int n = heights.size();
 
-        for (int h : heights) {
-            freq[h]++;
+        vector<int> v1;
+
+        for(int i= 0; i<n;i++){
+
+            v1.push_back(heights[i]);
         }
 
-        int count = 0;
-        int idx = 0;
+        sort(v1.begin(),v1.end());
 
-        for (int v = 1; v <= 100; v++) {
-            while (freq[v] > 0) {
-                if (heights[idx] != v) count++;
-                idx++;
-                freq[v]--;
+        int count = 0;
+
+        int j = 0;
+
+        for(int i = 0;i<n;i++){
+
+            if(v1[i] != heights[j]){
+
+                count++;
+                
             }
+            j++;
+
+   
         }
 
         return count;
+        
     }
 };
