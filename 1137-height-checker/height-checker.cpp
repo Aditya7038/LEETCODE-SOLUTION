@@ -4,29 +4,36 @@ public:
 
         int n = heights.size();
 
-        vector<int> v1;
+        vector<int> v1(101);
 
-        for(int i= 0; i<n;i++){
+        for(int i = 0; i<n;i++){
 
-            v1.push_back(heights[i]);
+            v1[heights[i]]++;
+           
         }
-
-        sort(v1.begin(),v1.end());
 
         int count = 0;
 
         int j = 0;
 
-        for(int i = 0;i<n;i++){
+        int freq = 0;
 
-            if(v1[i] != heights[j]){
+        
 
-                count++;
-                
+        for(int i = 0;i<101;i++){
+
+            if(v1[i]==0)continue;
+
+            freq = v1[i];
+
+            for(int k= 0;k<v1[i];j++){
+
+                if(heights[j] != i)count ++;
+                k++;
+
             }
-            j++;
+            
 
-   
         }
 
         return count;
