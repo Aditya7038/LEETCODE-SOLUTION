@@ -6,11 +6,10 @@ public:
 
         for(int i = 0;i<n;i++){
 
-            int a = -1;
-    
-            if(nums[abs(nums[i])-1] < 0) a = 1;
+            
+            if(nums[abs(nums[i])-1] < 0) continue;
 
-            nums[abs(nums[i])-1] *= a;
+            nums[abs(nums[i])-1] *= -1;
 
         }
 
