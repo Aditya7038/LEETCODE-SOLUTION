@@ -1,0 +1,22 @@
+class Solution {
+public:
+    int numberOfSteps(int num) {
+
+        int count = 0;
+
+        for(;;){
+
+            if(num==0) return count;
+
+            if(num % 2 ==0) num = num /2;
+
+            else num--;
+
+            count ++;
+
+        }
+
+        return count;
+        
+    }
+};
