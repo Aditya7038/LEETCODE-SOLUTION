@@ -24,11 +24,7 @@ public:
                 continue;
             }
 
-            if(s[i]<g[j]){
-
-                i++;
-            }
-
+            else i++;
 
         }
 
