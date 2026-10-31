@@ -21,7 +21,7 @@ public:
                 count++;
                 i++;
                 j++;
-                continue;
+                
             }
 
             else i++;
