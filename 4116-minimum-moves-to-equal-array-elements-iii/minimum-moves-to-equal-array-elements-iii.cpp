@@ -6,21 +6,19 @@ public:
 
         int max = nums[0];
 
-        for(int i = 0; i<n ; i++){
-
-            if(nums[i]>max) max = nums[i];
-
-        }
-
         int sum = 0;
 
         for(int i = 0; i<n ; i++){
 
-            sum += max -nums[i]; 
+            if(nums[i]>max) max = nums[i];
+
+            sum += nums[i];
 
         }
 
-        return sum;
+       
+
+        return n * max - sum;
         
     }
 };
