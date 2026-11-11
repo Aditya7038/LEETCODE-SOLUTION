@@ -2,8 +2,7 @@ class Solution {
 public:
     long long minimumCost(int cost1, int cost2, int costBoth, int need1, int need2) {
 
-        long long totalcost = 0;
-         
+        long long totalcost = 0; 
 
             if(costBoth > cost1 + cost2){
 
