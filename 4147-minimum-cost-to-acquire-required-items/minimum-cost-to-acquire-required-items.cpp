@@ -39,7 +39,7 @@ public:
 
             if(costBoth > cost1 + cost2){
 
-                totalcost += (long long)((long long)need1 * cost1)  + (long long)((long long)need2 * cost2);
+                totalcost += ((long long)need1 * cost1)  + ((long long)need2 * cost2);
 
             }
 
@@ -53,17 +53,17 @@ public:
 
                 if(temp == need1){
 
-                    if(cost2 < costBoth) totalcost += (long long)(need2 - need1) * (long long)cost2;
+                    if(cost2 < costBoth) totalcost += (need2 - need1) * (long long)cost2;
 
-                    else totalcost += (long long)(need2 - need1) * (long long)costBoth;
+                    else totalcost += (need2 - need1) * (long long)costBoth;
 
                 }
 
                 else {
 
-                    if(cost1 < costBoth) totalcost += (long long)(need1 - need2) * (long long)cost1;
+                    if(cost1 < costBoth) totalcost += (need1 - need2) * (long long)cost1;
 
-                    else totalcost += (long long)(need1 - need2) * (long long)costBoth;
+                    else totalcost += (need1 - need2) * (long long)costBoth;
                 }
                 
             }
